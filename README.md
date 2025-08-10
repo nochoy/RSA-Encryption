@@ -4,33 +4,24 @@ An RSA encryption library implemented in C with optimized key generation, encryp
 
 ## 🎬 Live Demo
 
-![Live Demo](demo.gif)
+![demo](https://github.com/user-attachments/assets/df27159c-5d37-44d0-b4db-10825feea142)
 
 ## 🎯 Features
 
-### 🔒 Security Features
-- **Cryptographically Secure**: Uses Miller-Rabin primality testing with 50 iterations
-- **Memory Safe**: Zeroes sensitive data after use
-- **Key Validation**: Comprehensive key pair validation
-- **Side-Channel Resistant**: Constant-time modular exponentiation
+- ✅ **Key generation**: Public and private key pairs
+- ✅ **Cryptographically Secure**: Uses Miller-Rabin primality testing with 50 iterations
+- ✅ **Encryption**: Uses RSA encryption
+- ✅ **GNU Multiple Precision Arithmetic Library (GMP)**: handles large integers critical for RSA cryptographic operations
+- ✅ **Cross-Platform**: Works on Linux and macOS
+- ✅ **CLI Interface**: Unix-style command-line arguments
 
-### ⚡ Performance Optimizations
-- **Fast Modular Exponentiation**: Optimized square-and-multiply algorithm
-- **Efficient GCD**: Binary GCD algorithm for key generation
-- **Memory Pool**: Efficient memory management for large numbers
-- **Multi-threading Ready**: Thread-safe random state management
-
-### 🌐 Cross-Platform Support
-- **Linux**: Full support with GCC/Clang
-- **macOS**: Native support with Xcode
-- **Windows**: MinGW/MSYS2 compatible
 
 ## 🔍 Technical Architecture
 
 ### RSA Algorithm Implementation
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Key Generation │    │   Encryption    │    │   Decryption    │
+│  Key Generation │    │   Encryption    │    │   Decryption    │
 ├─────────────────┤    ├─────────────────┤    ├─────────────────┤
 │ 1. Generate p,q │    │ 1. Read message │    │ 1. Read cipher  │
 │ 2. Compute n=pq │    │ 2. Pad message  │    │ 2. Decrypt      │
@@ -327,3 +318,4 @@ chmod 600 private.pem
 
 ---
 NOTE: This program was modified from a Computer Systems and C Programming course assignment. All header files were provided by Professor Darrell Long at UC Santa Cruz.
+
